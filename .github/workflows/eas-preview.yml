@@ -1,0 +1,32 @@
+# ── EAS Preview Build ──────────────────────────────────────
+# Triggers an Expo preview build on every push to main.
+# Delivers to internal distribution (TestFlight / internal track).
+
+name: EAS — Preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # allow manual trigger
+
+jobs:
+  preview:
+    name: EAS Preview (iOS + Android)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - run: npm ci --legacy-peer-deps
+
+      - name: Install EAS CLI
+        run: npm i -g eas-cli
+
+      - name: Trigger EAS Preview Build
+        run: eas build --platform all --profile preview --non-interactive --no-wait
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

@@ -1,0 +1,60 @@
+# ── CI: Pull Request Checks ────────────────────────────────
+# Runs on every PR to main. Validates types and bundle integrity.
+#
+# NOTE: verify-bundle uses a dummy .env so `npx expo export` doesn't
+# choke on missing EXPO_PUBLIC_* vars at build time. Production
+# builds on EAS use the real .env.production.
+
+name: CI — Pull Request
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  typecheck:
+    name: TypeScript Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+
+      - name: Run tsc
+        run: npm run typecheck
+
+  verify-bundle:
+    name: Verify iOS Bundle
+    runs-on: ubuntu-latest
+    needs: typecheck
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+
+      - name: Set dummy .env
+        run: |
+          cat > .env << 'ENVEOF'
+          EXPO_PUBLIC_SUPABASE_URL=https://dummy.supabase.co
+          EXPO_PUBLIC_SUPABASE_ANON_KEY=dummy-anon-key
+          EXPO_PUBLIC_SUPABASE_FUNCTIONS_URL=https://dummy.supabase.co/functions/v1
+          EXPO_PUBLIC_REVENUECAT_API_KEY=dummy-rc-key
+          EXPO_PUBLIC_POSTHOG_API_KEY=dummy-ph-key
+          SENTRY_DSN=https://dummy@o0.ingest.sentry.io/0
+          SENTRY_ENVIRONMENT=ci
+          ENVEOF
+
+      - name: Run expo export (iOS)
+        run: npx expo export --platform ios --output-dir dist
