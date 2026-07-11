@@ -1,0 +1,48 @@
+{
+  "home": {
+    "welcome": "移动应用模板",
+    "tagline": "准备起飞"
+  },
+  "settings": {
+    "title": "设置",
+    "appearance": "外观",
+    "darkMode": "深色模式",
+    "language": "语言",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "feedback": "发送反馈",
+    "rate": "评分",
+    "version": "版本"
+  },
+  "paywall": {
+    "title": "解锁全部功能",
+    "subtitle": "免费试用3天，之后 {{price}}/月",
+    "subscribe": "开始免费试用",
+    "restore": "恢复购买",
+    "noThanks": "暂不需要"
+  },
+  "onboarding": {
+    "skip": "跳过",
+    "next": "继续",
+    "getStarted": "开始使用",
+    "step1_title": "欢迎",
+    "step1_desc": "你的新应用，几分钟即可就绪",
+    "step2_title": "保持有序",
+    "step2_desc": "所有工具集中一处",
+    "step3_title": "出发",
+    "step3_desc": "开始创造精彩"
+  },
+  "feedback": {
+    "title": "发送反馈",
+    "placeholder": "告诉我们你的想法...",
+    "submit": "提交",
+    "cancel": "取消",
+    "errorTitle": "提示",
+    "errorNoRating": "请先选择评分再提交。",
+    "rateTitle": "喜欢这个应用吗？",
+    "rateMessage": "你的反馈能帮助我们改进。",
+    "rateNow": "去评分",
+    "later": "再说吧",
+    "never": "不再提醒"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "MobileAppTemplate",
+    "slug": "MobileAppTemplate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "mobileapptemplate",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#0D1117"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.template.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0D1117",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.template.app",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-localization",
+      "@sentry/react-native/expo",
+      "expo-tracking-transparency"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "description": "MobileAppTemplate — App Store metadata",
+  "categories": ["Utilities"],
+  "price_tier": 0,
+  "release_notes": "Initial release of MobileAppTemplate.",
+  "keywords": "tools, utilities, productivity",
+  "primary_category": "Utilities",
+  "secondary_category": "Productivity",
+  "primary_first_sub_category": "Other",
+  "primary_second_sub_category": "Other",
+  "secondary_first_sub_category": "Other",
+  "secondary_second_sub_category": "Other",
+  "privacy_url": "https://example.com/privacy",
+  "support_url": "https://example.com/support",
+  "marketing_url": "https://example.com"
+}

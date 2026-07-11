@@ -1,0 +1,6 @@
+{
+  "home": { "welcome": "", "tagline": "" },
+  "settings": { "title": "", "appearance": "", "darkMode": "", "language": "", "privacy": "", "terms": "", "feedback": "", "rate": "", "version": "" },
+  "paywall": { "title": "", "subtitle": "", "subscribe": "", "restore": "", "noThanks": "" },
+  "onboarding": { "skip": "", "next": "", "getStarted": "", "step1_title": "", "step1_desc": "", "step2_title": "", "step2_desc": "", "step3_title": "", "step3_desc": "" }
+}

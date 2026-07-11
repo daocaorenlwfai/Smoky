@@ -1,0 +1,9 @@
+# MobileAppTemplate
+
+A modern mobile application template built with Expo SDK 57. Configure, customize, and launch.
+
+## Features
+- Dark mode support
+- Multi-language (EN/ZH/ES/JA)
+- Subscription ready (RevenueCat)
+- Analytics & crash reporting

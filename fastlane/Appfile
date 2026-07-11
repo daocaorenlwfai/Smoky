@@ -1,0 +1,11 @@
+# Fastlane Appfile — shared across all lanes
+
+# These values get overridden per-app via environment variables.
+# Set them in your CI/CD pipeline or local .env.
+
+app_identifier("com.template.app")
+apple_id("{{APPLE_ID_EMAIL}}")
+team_id("{{APPLE_TEAM_ID}}")
+
+# itc_team_id, when needed for App Store Connect team
+# itc_team_id("{{ITC_TEAM_ID}}")

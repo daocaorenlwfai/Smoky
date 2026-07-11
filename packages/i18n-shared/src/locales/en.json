@@ -1,0 +1,48 @@
+{
+  "home": {
+    "welcome": "Mobile App Template",
+    "tagline": "Ready for takeoff"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "darkMode": "Dark Mode",
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "feedback": "Send Feedback",
+    "rate": "Rate the App",
+    "version": "Version"
+  },
+  "paywall": {
+    "title": "Unlock Full Access",
+    "subtitle": "Try free for 3 days, then {{price}}/month",
+    "subscribe": "Start Free Trial",
+    "restore": "Restore Purchases",
+    "noThanks": "Maybe Later"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "next": "Next",
+    "getStarted": "Get Started",
+    "step1_title": "Welcome",
+    "step1_desc": "Your new app, ready in minutes",
+    "step2_title": "Stay Organized",
+    "step2_desc": "All your tools in one place",
+    "step3_title": "Let's Go",
+    "step3_desc": "Start building something great"
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "placeholder": "Tell us what you think...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "errorTitle": "Oops",
+    "errorNoRating": "Please select a rating before submitting.",
+    "rateTitle": "Enjoying the app?",
+    "rateMessage": "Your feedback helps us improve.",
+    "rateNow": "Rate Now",
+    "later": "Maybe Later",
+    "never": "Don't Ask Again"
+  }
+}
