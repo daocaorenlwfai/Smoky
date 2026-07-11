@@ -10,7 +10,9 @@
       "@template/settings": ["./packages/settings/src"],
       "@template/analytics": ["./packages/analytics/src"],
       "@template/i18n-shared": ["./packages/i18n-shared/src"],
-      "@template/theme": ["./packages/theme/src"]
+      "@template/theme": ["./packages/theme/src"],
+      "@template/supabase": ["./packages/supabase/src"],
+      "@template/feedback": ["./packages/feedback/src"]
     }
   }
 }
