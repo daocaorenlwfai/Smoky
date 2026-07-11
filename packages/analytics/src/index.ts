@@ -3,7 +3,7 @@
 
 import { PostHogProvider, usePostHog } from 'posthog-react-native';
 
-let posthogRef: ReturnType<typeof usePostHog> = null;
+let posthogRef: ReturnType<typeof usePostHog> | null = null;
 
 export function setPostHogInstance(ph: ReturnType<typeof usePostHog>): void {
   posthogRef = ph;
