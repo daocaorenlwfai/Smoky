@@ -48,6 +48,7 @@
   "smoke": {
     "today": "Today",
     "hint": "Tap the circle to add one",
-    "title": "Smoke"
+    "title": "Smoke",
+    "loginRequired": "Sign in to start tracking"
   }
 }
