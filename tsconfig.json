@@ -11,7 +11,8 @@
       "@template/i18n-shared": ["./packages/i18n-shared/src"],
       "@template/theme": ["./packages/theme/src"],
       "@template/supabase": ["./packages/supabase/src"],
-      "@template/feedback": ["./packages/feedback/src"]
+      "@template/feedback": ["./packages/feedback/src"],
+      "@template/smoke": ["./packages/smoke/src"]
     }
   }
 }

@@ -44,5 +44,10 @@
     "rateNow": "Rate Now",
     "later": "Maybe Later",
     "never": "Don't Ask Again"
+  },
+  "smoke": {
+    "today": "Today",
+    "hint": "Tap the circle to add one",
+    "title": "Smoke"
   }
 }

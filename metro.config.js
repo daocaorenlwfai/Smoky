@@ -7,13 +7,24 @@ const projectRoot = __dirname;
 /** @type {import('expo/metro-config').MetroConfig} */
 const config = getDefaultConfig(projectRoot);
 
-// ── Resolve @template/* aliases ──────────────────────────
-const packagesDir = path.join(projectRoot, 'packages');
-const packages = ['auth', 'paywall', 'onboarding', 'settings', 'analytics', 'i18n-shared', 'theme', 'supabase', 'feedback'];
+config.watchFolders = [
+  path.resolve(projectRoot, 'packages'),
+];
 
-packages.forEach((pkg) => {
-  config.resolver.extraNodeModules[`@template/${pkg}`] = path.join(packagesDir, pkg, 'src');
-  config.watchFolders.push(path.join(packagesDir, pkg));
-});
+config.resolver = {
+  ...config.resolver,
+  extraNodeModules: new Proxy(
+    {},
+    {
+      get: (_, name) => {
+        if (name.startsWith('@template/')) {
+          const pkg = name.replace('@template/', '');
+          return path.resolve(projectRoot, 'packages', pkg, 'src');
+        }
+        return undefined;
+      },
+    }
+  ),
+};
 
 module.exports = config;
