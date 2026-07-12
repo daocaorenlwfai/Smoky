@@ -53,7 +53,7 @@ export default {
     extra: {
       revenueCatApiKey: process.env.EXPO_PUBLIC_REVENUECAT_API_KEY,
       eas: {
-        projectId: '00000000-0000-0000-0000-000000000000',
+        projectId: '291a4132-3b51-415d-873c-dc31d5015ae8',
       },
     },
   },

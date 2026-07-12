@@ -7,7 +7,9 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "env": ".env.development",
+      "env": {
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      },
       "ios": {
         "simulator": true
       },
@@ -17,7 +19,6 @@
     },
     "preview": {
       "distribution": "internal",
-      "env": ".env.development",
       "ios": {
         "resourceClass": "m-medium"
       },
@@ -27,7 +28,6 @@
     },
     "production": {
       "autoIncrement": true,
-      "env": ".env.production",
       "ios": {
         "resourceClass": "m-large"
       },
